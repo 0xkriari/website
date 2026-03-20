@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background: #212121;
+    color: #f5f5dc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+}
+
+pre {
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.2;
+    white-space: pre;
+}
