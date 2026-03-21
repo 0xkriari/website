@@ -46,23 +46,39 @@ body {
 /* ─── Hero ───────────────────────────────────────────── */
 .hero {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 2rem;
   margin-bottom: 2rem;
-  width: 100%;
+  flex-wrap: wrap;
 }
 
 /* ─── ASCII blocks ───────────────────────────────────── */
+.monogram,
 .wordmark {
   font-family: var(--font-mono);
   color: var(--fg);
-  font-size: clamp(0.45rem, 1.1vw, 0.7rem);
   line-height: 1.35;
   white-space: pre;
   letter-spacing: 0.05em;
+  /* glow effect */
   text-shadow:
     0 0 6px rgba(245, 245, 220, 0.5),
     0 0 14px rgba(245, 245, 220, 0.2);
   user-select: none;
+}
+
+.monogram {
+  font-size: clamp(0.65rem, 1.8vw, 1rem);
+  border: 1px dashed var(--border);
+  padding: 0.75rem 1rem;
+  flex-shrink: 0;
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards 0.1s;
+}
+
+.wordmark {
+  font-size: clamp(0.45rem, 1.1vw, 0.7rem);
   opacity: 0;
   animation: fadeIn 0.4s ease forwards 0.3s;
 }
@@ -76,14 +92,12 @@ body {
   line-height: 1.7;
   opacity: 0;
   animation: fadeIn 0.4s ease forwards 0.5s;
-  text-align: center;
-  width: 100%;
 }
 
+/* ─── Nav Buttons ─────────────────────────────────────── */
 .nav-buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 0.75rem;
   margin-bottom: 2rem;
   opacity: 0;
