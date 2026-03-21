@@ -1,4 +1,199 @@
-/* ─── Variables ─────────────────────────────────────── */
+:root {
+  --bg: #212121;
+  --fg: #f5f5dc;
+  --fg-dim: rgba(245, 245, 220, 0.78);
+  --border: rgba(245, 245, 220, 0.7);
+  --border-soft: rgba(245, 245, 220, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "IBM Plex Mono", "Courier New", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 24px;
+}
+
+.terminal-shell {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.hero {
+  border: 1px solid transparent;
+}
+
+.brand-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.ascii-logo {
+  margin: 0;
+  color: var(--fg);
+  font-size: clamp(0.5rem, 0.95vw, 1rem);
+  line-height: 1.05;
+  white-space: pre;
+  text-shadow: 0 0 1px rgba(245, 245, 220, 0.15);
+}
+
+.monogram {
+  flex: 0 0 auto;
+}
+
+.wordmark {
+  flex: 1 1 480px;
+  align-self: center;
+}
+
+.subtitle,
+.footer-text {
+  max-width: 900px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--fg-dim);
+}
+
+.subtitle {
+  margin: 0 0 26px;
+}
+
+.nav-tabs {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  margin: 18px 0 0;
+}
+
+.nav-tabs a {
+  color: var(--fg);
+  text-decoration: none;
+  border: 1px dashed var(--border);
+  padding: 14px 34px;
+  min-width: 140px;
+  text-align: center;
+  text-transform: lowercase;
+  transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.nav-tabs a:hover,
+.nav-tabs a:focus-visible {
+  background: rgba(245, 245, 220, 0.08);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.divider {
+  margin: 0;
+  border-bottom: 1px dashed var(--border);
+  width: 100%;
+}
+
+.cta-panel {
+  display: flex;
+  justify-content: center;
+  padding: 54px 0 42px;
+}
+
+.main-button {
+  color: var(--fg);
+  text-decoration: none;
+  border: 1px dashed var(--border);
+  padding: 22px 46px;
+  font-size: 1.1rem;
+  display: inline-block;
+  min-width: 280px;
+  text-align: center;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.main-button:hover,
+.main-button:focus-visible {
+  background: rgba(245, 245, 220, 0.08);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.footer-text {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.projects-list {
+  margin-top: 64px;
+}
+
+.projects-list h2 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0 0 18px;
+  color: var(--fg);
+}
+
+.project-box {
+  border: 1px dashed var(--border-soft);
+  padding: 24px;
+}
+
+.project-box p {
+  margin: 0 0 12px;
+  color: var(--fg-dim);
+}
+
+.project-box p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 820px) {
+  body {
+    padding: 28px 16px;
+  }
+
+  .brand-row {
+    gap: 20px;
+  }
+
+  .ascii-logo {
+    font-size: clamp(0.42rem, 1.55vw, 0.82rem);
+  }
+
+  .subtitle,
+  .footer-text {
+    font-size: 1rem;
+  }
+
+  .nav-tabs {
+    justify-content: flex-start;
+  }
+
+  .nav-tabs a {
+    min-width: 120px;
+    padding: 12px 22px;
+  }
+
+  .main-button {
+    min-width: 220px;
+    width: 100%;
+    max-width: 360px;
+  }
+}/* ─── Variables ─────────────────────────────────────── */
 :root {
   --bg:        #212121;
   --fg:        #f5f5dc;
